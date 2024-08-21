@@ -42,3 +42,22 @@ fun JetpackAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Compos
             content = content
     )
 }
+
+@Composable
+fun CalculatorPrepTheme(
+    darkTheme: Boolean = true,
+    content: @Composable () -> Unit
+) {
+    val colors = if (darkTheme) {
+        DarkColorPalette
+    } else {
+        LightColorPalette
+    }
+
+    MaterialTheme(
+        colors = colors,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
